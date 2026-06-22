@@ -24,7 +24,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           check-args: >
-            --features zcashd-import,rpc-cli,tokio-console
+            --no-default-features
+            --features zaino,zcashd-import,rpc-cli,tokio-console
             --all-targets
           args: >
             -D warnings
@@ -62,7 +63,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           check-args: >
-            --features zcashd-import,rpc-cli,tokio-console
+            --no-default-features
+            --features zaino,zcashd-import,rpc-cli,tokio-console
             --all-targets
           args: >
             -W clippy::all
